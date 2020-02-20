@@ -12,3 +12,5 @@
 */
 
 Route::get('/','Icontroller@index');
+Route::get('article/{id}', 'Icontroller@show')->name('articleShow');
+
