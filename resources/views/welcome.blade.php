@@ -7,9 +7,9 @@
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
     <div class="container">
-      <h1 class="display-3">{{$a}}</h1>
-      <p>{{$b}}</p>
-      <p><a class="btn btn-primary btn-lg" href="{{ route('articleShow',['id'=>@article->id]) }}" role="button">Learn more &raquo;</a></p>
+      <h1 class="display-3">{{$header}}</h1>
+      <p>{{$message}}</p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
     </div>
   </div>
 
@@ -18,12 +18,11 @@
     <div class="row">
     
   @foreach ($articles as $article)
-
-
       <div class="col-md-4">
         <h2>{{$article->title}}</h2>
         <p>{{$article->description}}</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="{{route('articleShow', ['id'=>$article->id])}}" role="button">View details &raquo;</a></p>
+        <img src={{$article->img}}>
       </div>
    @endforeach  
 

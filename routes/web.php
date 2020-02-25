@@ -1,5 +1,5 @@
 <?php
-
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,5 +12,5 @@
 */
 
 Route::get('/','Icontroller@index');
-Route::get('article/{id}', 'Icontroller@show')->name('articleShow');
+Route::get('/article/{id}', 'Icontroller@show')->name('articleShow');
 
