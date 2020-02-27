@@ -2,10 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Jumbotron Template · Bootstrap</title>
+    <title></title>
     
-    <link href="css/bootstrap.min.css" rel="stylesheet" >
-    <link href="css/jumbotron.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css')}}" rel="stylesheet" >
+    <link href="{{ asset('css/jumbotron.css')}}" rel="stylesheet">
 
      </head>
   <body>
@@ -26,7 +26,16 @@
          </div>
        </div>
     </nav>
+@if(count($errors)>0)
+<div class="alert alert-danger">
+  <ul>
+    @foreach($errors->all() as $error)
+    <li>{{$error}}</li>
 
+    @endforeach
+  </ul>
+  @endif
+</div>
 @yield('main')
 <footer class="container">
   <p>&copy; 2020 Company, Inc.</p>

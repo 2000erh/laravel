@@ -22,7 +22,7 @@ public function __construct() {
  public function index() {
         $article = Article::select(['id','title','description','img'])->get();
         //dump($articles);
-        return view('welcome')->with(['message'=> $this->message,'header'=>$this->header, 'articles'=>$articles]);
+        return view('welcome')->with(['message'=> $this->message,'header'=>$this->header, 'articles'=>$article]);
 }
 
 public function show($id) {
@@ -30,4 +30,17 @@ public function show($id) {
 	return view ('article-content')->with(['message'=>$this->message, 'header'=> $this->header,'article'=>$article]);
 }
 
+public function add(){
+	return view ('add-content')->with(['message'=> $this->message, 'header'=>$this->header ]);
+}
+
+public function store(Request $request){
+	$this->validate($request,['title'=>'required | max:50]', 'description'=>'required | max:200', 'text'=>'required']);
+
+	$data = $request->all();
+	$article = new Article;
+	$article ->fill($data);
+	$article->save();
+	return redirect('');
+}
 }

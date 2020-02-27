@@ -1,7 +1,7 @@
 /* Move down content because we have a fixed navbar that is 3.5rem tall */
-/*body {
+body {
   padding-top: 3.5rem;
-}*/
+}
 .links > a {
   color: DodgerBlue;
   padding: 0 15px;
@@ -15,3 +15,7 @@
 img{
 	width: 100%;
 }
+
+.form{
+	width: 100%;
+	}

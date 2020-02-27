@@ -14,3 +14,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/','Icontroller@index');
 Route::get('/article/{id}', 'Icontroller@show')->name('articleShow');
 
+Route::get('page/add', 'Icontroller@add');
+Route::post('page/add','Icontroller@store')->name('articleStore');
