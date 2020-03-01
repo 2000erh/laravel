@@ -13,8 +13,8 @@ protected $message;
 protected $header;
 
 public function __construct() {
-    $this->header='Hello World !!!';
-    $this->message='This is a template for a simple marketing';
+    $this->header='THE CHOICE OF OUR STYLIST';
+    $this->message='We ❤ brands';
 
  }
 
@@ -22,7 +22,7 @@ public function __construct() {
  public function index() {
         $article = Article::select(['id','title','description','img'])->get();
         //dump($articles);
-        return view('welcome')->with(['message'=> $this->message,'header'=>$this->header, 'articles'=>$article]);
+        return view('index')->with(['message'=> $this->message,'header'=>$this->header, 'articles'=>$article]);
 }
 
 public function show($id) {

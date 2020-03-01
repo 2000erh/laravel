@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
--- Gazdă: 127.0.0.1
--- Timp de generare: feb. 20, 2020 la 09:28 AM
--- Versiune server: 10.3.16-MariaDB
--- Versiune PHP: 7.3.7
+-- Host: 127.0.0.1
+-- Generation Time: Mar 01, 2020 at 02:56 PM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Bază de date: `article`
+-- Database: `article`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structură tabel pentru tabel `articles`
+-- Table structure for table `articles`
 --
 
 CREATE TABLE `articles` (
@@ -36,37 +36,39 @@ CREATE TABLE `articles` (
   `alias` varchar(255) NOT NULL,
   `img` varchar(255) NOT NULL,
   `meta_key` varchar(50) NOT NULL,
-  `meta_desc` varchar(100) NOT NULL
+  `meta_desc` varchar(100) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Eliminarea datelor din tabel `articles`
+-- Dumping data for table `articles`
 --
 
-INSERT INTO `articles` (`id`, `title`, `description`, `text`, `alias`, `img`, `meta_key`, `meta_desc`) VALUES
-(1, 'Apple iPhone 11 64GB, Black', 'Sistem de operare : iOS\r\nDimensiuni (L x L x G) : 150.9 x 75.7 x 8.3 mm\r\nTip procesor : Hexa Core\r\nRezolutie video : 3840 x 2160 px\r\nSensori : Face ID, accelerometru, giroscop, proximitate, busol?, barometru\r\nRezolutie : 1792 x 828 px', 'Se spune c? în cazuri cu adev?rat magice, po?i iubi, f?r? a-?i vedea sortitul mai întâi\r\nA?a a fost ?i cu iPhone 11, care a fost îndr?git de o lume întreag? pân? la lansare\r\nIar atunci când s-a dezv?luit lumii, rezultatul a întrecut a?tept?rile', 'Apple iPhone 11', 'https://darwin.md/images/product/2019/65/darwin-apple-iphone-11-64gb-black.jpg', 'Apple iPhone 11', 'Apple iPhone 11'),
-(2, 'Apple iPhone 11 Pro Max 256GB, Green', 'Memorie interna : 256 GB\r\nRezolutie senzor : Triple: 12 + 12 + 12 Mpx\r\nRetea 3G : 850 / 900 / 1700 / 1900 / 2100\r\nCuloare : Green\r\nTip SIM : Nano-SIM\r\nRetea 2G : 850 / 900 / 1800 / 1900', 'Phone demult a pierdut caracteristica de ?simplu? înc? demult\r\nDar acuma trecut la un cu totul alt nivel decât cel al smartphone-urilor\r\nAcesta opereaz? cu o vitez? incredibil? datorit? Chip-ului Bionic A13', 'Apple iPhone 11 Pro Max 256GB, Green', 'https://darwin.md/images/product/2019/77/darwin-apple-iphone-11-pro-max-256gb-green.jpg', 'Apple iPhone 11 Pro Max 256GB, Green', 'Apple iPhone 11 Pro Max 256GB, Green'),
-(3, 'Apple iPhone XR 64GB, Black', '\r\nToate specifica?iile\r\nîn compara?ie\r\nîn favorite\r\nVrei s? afli mai multe detalii despre produs?\r\n14 499 lei\r\nEconomise?ti 2 000 lei\r\n12 499 lei\r\n', 'Un reprezentant superb al noii linii de smartphone-uri Apple\r\nNoua versiune a primit un design la fel de minunat ca ?i modelul iPhone X\r\nDoar c? panoul din spate este realizat cu meticulozitate din sticl?', 'Apple iPhone XR 64GB, Black', 'https://darwin.md/images/product/2019/901/darwin-49-apple-iphone-xr-64gb-black.jpg', 'Apple iPhone XR 64GB, Black', 'Apple iPhone XR 64GB, Black'),
-(4, 'Apple iPhone 8 64GB, Gold', 'Diagonala display : 4.7\"\r\nBluetooth : 5.0\r\nWi-Fi : 802.11 a/b/g/n/ac\r\nMemorie interna : 64 GB\r\nDurata de convorbire : 14 ore\r\nNr. SIM : Mono SIM', 'Integreaz? cel mai puternic procesor A11 Bionic ?i înc?rcare rapid? wireless.\r\nNavigheaz? rapid, descarc? mai multe jocuri ?i treci de la o aplica?ie la alta cu u?urin?? datorit? celor 6 nuclee de performan?? ?i eficien??.', 'Apple iPhone 8 64GB, Gold', 'https://darwin.md/images/product/2019/17/darwin-apple-iphone-8-64gb-gold.jpg', 'Apple iPhone 8 64GB, Gold', 'Apple iPhone 8 64GB, Gold'),
-(5, 'Apple iPhone 6s 32GB, Space Gray', 'Culoare : Space Gray\r\nDimensiuni (L x L x G) : 138.3 x 67.1 x 7.1 mm\r\nTip SIM : Nano SIM\r\nRetea 2G : 850 / 900 / 1800 / 1900\r\nGPS : Da\r\nRetea 4G : 700 / 800 / 850 / 900 / 1700 / 1800 / 1900 / 2100 / 2600', 'Acum momentele memorabile vor deveni istorie. Live Photos transform? cadrele statice în cele vii\r\nSavureaz? mai multe detalii uimitoare pe pixel, cu camera iSight de 12 MP\r\nDoar alege un cadru bun, atinge butonul ?i f? cea mai uimitoare fotografie pentru colec?ia ta', 'Apple iPhone 6s 32GB, Space Gray', '', 'Apple iPhone 6s 32GB, Space Gray', 'Apple iPhone 6s 32GB, Space Gray'),
-(6, 'Apple iPhone 7 Plus 128GB, Black', 'Rezolutie video : 1920 x 1080 px\r\nRetea 2G : 850 / 900 / 1800 / 1900\r\nUSB : Da\r\nRetea 3G : 850 / 900 / 1700 / 1900 / 2100\r\nWi-Fi : 802.11 a/b/g/n/ac, dual-band, hotspot\r\nTip SIM : Nano-SIM', 'Mai puternic ?i mai functional datorit? noului processor A10.\r\nRetina HD, LCD Muti-Touch cu diagonala de 5,5 inchi, poate cel mai viu ?i complex display.', 'Apple iPhone 7 Plus 128GB, Black', 'https://darwin.md/images/product/2019/744/darwin-43-apple-iphone-7-plus-128gb-black.jpg', 'Apple iPhone 7 Plus 128GB, Black', 'Apple iPhone 7 Plus 128GB, Black');
+INSERT INTO `articles` (`id`, `title`, `description`, `text`, `alias`, `img`, `meta_key`, `meta_desc`, `created_at`, `updated_at`) VALUES
+(1, 'Zegar Aleksandria', 'PLN 89.00', 'Zegar Aleksandria to wyj?tkowa ?cienna ozdoba, która ??czy w sobie oryginaln? transparentn? powierzchni? z ponadczasow? czerni? oraz eleganckim blaskiem z?ota. Design zegara intryguje i b?yskawicznie przyci?ga wzrok. ?rodek okr?g?ej tarczy ukazuje bowiem misterny mechanizm w postaci pracuj?cych kó? z?batych. Ca?o?? doskonale wpisze si? w klasyczny wystrój wn?trza kuchni, salonu lub korytarza.', 'Apple iPhone 11', 'https://home-you.com/media/catalog/product/cache/ecd051e9670bd57df35c8f0b122d8aea/5/e/5e4e7d9b0205f55834-Z_O-ZEGARALEKSANDRIAZEGARWISZ_CY.jpg', 'Zegar Aleksandria', 'Zegar Aleksandria', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(2, 'Powietrza Eleganza', '\r\nPLN 59.00', 'Brand	home&you\r\nColor	white\r\nMaterial	wosk / szk?o / metal\r\nSize	8 x 13 cm\r\nCapacity	150 ml\r\nHeight	16 cm', 'Od?wie?acz Powietrza Eleganza', 'https://home-you.com/media/catalog/product/cache/ecd051e9670bd57df35c8f0b122d8aea/5/e/5e4e80e970b4756826-BIA-ODSWELEGANZAOD_WIE_ACZPOWIETRZA_1_.jpg', 'Od?wie?acz Powietrza Eleganza', 'Od?wie?acz Powietrza Eleganza', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, 'Skarbonka Money', 'PLN 59.00', 'Brand	home&you\r\nColor	black\r\nMaterial	dolomit / guma\r\nSize	12 x 17 cm\r\nHeight	19 cm', 'Skarbonka Their Money', 'https://home-you.com/media/catalog/product/cache/ecd051e9670bd57df35c8f0b122d8aea/5/e/5e342c0177ccb37686-CZA-SKARTHEIRMONEYSKARBONKA.jpg', 'Skarbonka Their Money', 'Skarbonka Their Money', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(4, 'Donica Organdiegg', 'PLN 59.00', 'Brand	home&you\r\nColor	white\r\nMaterial	ceramika\r\nDiameter	15 cm\r\nHeight	19 cm', 'Donica Organdiegg', 'https://home-you.com/media/catalog/product/cache/ecd051e9670bd57df35c8f0b122d8aea/5/e/5e4e7d1eb062355669-BIA-OS_O-WNORGANDIEGGOS_ONKA.jpg', 'Donica Organdiegg', 'Donica Organdiegg', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(5, 'Dywanik Dorita', 'PLN 119', 'Chodniczek posiada na spodzie antypo?lizgow? lateksow? pow?ok?, która zapewnia lepsz? przyczepno?? do pod?ogi.', 'Dywanik Dorita', 'https://home-you.com/media/catalog/product/cache/ecd051e9670bd57df35c8f0b122d8aea/5/d/5dfcae0f87a0956114-CZA-LAMPARHOMBLAMPASTO_OWA.jpg', 'Dywanik Dorita', 'Dywanik Dorita', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(6, 'Komplet Do Octu', 'PLN 79.00', 'Brand	home&you\r\nColor	white\r\nMaterial	ceramika / drewno\r\nSize	6 x 6 cm\r\nHeight	15 cm', 'Komplet Do Octu', 'https://home-you.com/media/catalog/product/cache/b1da59954c69277407a129190fba437d/5/e/5e4e7cd240dc255443-BIA-POJOCAMBINIKOMPLETDOOCTUIOLIWY.jpg', 'Komplet Do Octu', 'Komplet Do Octu', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 --
--- Indexuri pentru tabele eliminate
+-- Indexes for dumped tables
 --
 
 --
--- Indexuri pentru tabele `articles`
+-- Indexes for table `articles`
 --
 ALTER TABLE `articles`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT pentru tabele eliminate
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pentru tabele `articles`
+-- AUTO_INCREMENT for table `articles`
 --
 ALTER TABLE `articles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;

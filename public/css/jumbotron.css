@@ -1,6 +1,7 @@
 /* Move down content because we have a fixed navbar that is 3.5rem tall */
 body {
   padding-top: 3.5rem;
+  font-family: 'Spartan' !important;
 }
 .links > a {
   color: DodgerBlue;
@@ -19,3 +20,18 @@ img{
 .form{
 	width: 100%;
 	}
+.navbar{
+  background-color: #a51632 !important;
+  
+}
+.links a{
+  color: white !important;
+}
+
+.title{
+  background-image: url(image1.png) !important;
+}
+.btn-lg, .btn-secondary{
+  background-color: #a51632 !important;
+  border:none !important;
+}
