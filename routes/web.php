@@ -16,3 +16,11 @@ Route::get('/article/{id}', 'Icontroller@show')->name('articleShow');
 
 Route::get('page/add', 'Icontroller@add');
 Route::post('page/add','Icontroller@store')->name('articleStore');
+
+Route::delete('page/delete/{article}',function(\App\Article $article)
+{
+	$article->delete();
+	return redirect('admin');
+})->name('articleDelete');
+
+Route::get('/admin', 'IController@admin');

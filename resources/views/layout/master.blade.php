@@ -19,8 +19,8 @@
           <a href="https://laracasts.com">LIVING ROOM</a>
           <a href="https://laravel-news.com">BATHROOM</a>
           <a href="https://blog.laravel.com">KITCHEN</a>
-          <a href="https://forge.laravel.com">ACCESORIES</a>
-          <a href="https://vapor.laravel.com">SALE</a>
+          <a href="page/add">INSERT</a>
+          <a href="admin">ADMIN</a>
          
          </div>
        </div>

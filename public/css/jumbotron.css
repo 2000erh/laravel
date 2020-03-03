@@ -35,3 +35,13 @@ img{
   background-color: #a51632 !important;
   border:none !important;
 }
+
+.btn-danger{
+   background-color: #a51632 !important;
+  border:none !important;
+  margin-bottom: 50px;
+}
+
+.jumbotron{
+  background-color: green !important;
+}

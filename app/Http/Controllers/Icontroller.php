@@ -43,4 +43,10 @@ public function store(Request $request){
 	$article->save();
 	return redirect('');
 }
+
+public function admin(){
+	$articles=Article::select(['id','title','description'])->get();
+	return view('admin')->with(['message'=>$this->message, 'header'=> $this->header,'articles'=>$articles]);
+}
+
 }
